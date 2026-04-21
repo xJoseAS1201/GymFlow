@@ -1,0 +1,174 @@
+.preregistro-page {
+  padding: 50px 0 90px;
+  background:
+    linear-gradient(180deg, rgba(245, 243, 238, 0.9) 0%, rgba(255, 255, 255, 1) 100%);
+  min-height: 100vh;
+}
+
+.preregistro-section {
+  padding-top: 30px;
+}
+
+.preregistro-wrapper {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.preregistro-intro {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.preregistro-intro h1 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.05;
+  margin-bottom: 16px;
+  letter-spacing: -1px;
+}
+
+.preregistro-intro p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--color-text-light);
+  font-size: 1rem;
+}
+
+.preregistro-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.benefit-box {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-soft);
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.preregistro-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 26px;
+  box-shadow: var(--shadow-medium);
+  padding: 34px 28px;
+}
+
+.preregistro-form {
+  display: grid;
+  gap: 20px;
+}
+
+.form-group {
+  display: grid;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 15px 16px;
+  border-radius: 14px;
+  border: 1px solid var(--color-border);
+  background: #fff;
+  font-size: 1rem;
+  color: var(--color-text);
+  outline: none;
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 4px rgba(245, 160, 0, 0.12);
+}
+
+.form-group input::placeholder {
+  color: #8a8f98;
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding-top: 4px;
+}
+
+.form-checkbox input[type="checkbox"] {
+  margin-top: 4px;
+  accent-color: var(--color-primary);
+}
+
+.form-checkbox label {
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  line-height: 1.5;
+}
+
+.btn-submit {
+  width: 100%;
+  margin-top: 8px;
+  padding: 16px 20px;
+  font-size: 1rem;
+}
+
+.preregistro-nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .preregistro-page {
+    padding: 36px 0 70px;
+  }
+
+  .preregistro-intro {
+    margin-bottom: 24px;
+  }
+
+  .preregistro-card {
+    padding: 24px 18px;
+    border-radius: 22px;
+  }
+
+  .preregistro-benefits {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .benefit-box {
+    border-radius: 16px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .preregistro-nav-actions {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.mensaje-exito {
+  display: none;
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(245, 160, 0, 0.12);
+  border: 1px solid rgba(245, 160, 0, 0.3);
+  color: var(--color-text);
+  font-weight: 600;
+  text-align: center;
+}

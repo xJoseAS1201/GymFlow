@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preregistro | GymFlow</title>
+  <meta name="description" content="Completa tu preregistro en GymFlow y agiliza tu proceso de inscripción al llegar al gimnasio.">
+
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/preregistro.css">
+</head>
+<body>
+
+  <header class="header">
+    <nav class="navbar container">
+      <div class="logo">
+        <a href="../index.html">GymFlow</a>
+      </div>
+
+      <div class="preregistro-nav-actions">
+        <a href="../index.html" class="btn btn-secondary">Volver al inicio</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="preregistro-page">
+    <section class="preregistro-section">
+      <div class="container">
+        <div class="preregistro-wrapper">
+          <div class="preregistro-intro">
+            <span class="section-label">Preregistro</span>
+            <h1>Completa tus datos y ahorra tiempo en recepción</h1>
+            <p>
+              Déjanos tu información para adelantar tu proceso de inscripción.
+              Cuando llegues al gimnasio, el proceso será más rápido y ordenado.
+            </p>
+
+            <div class="preregistro-benefits">
+              <div class="benefit-box">Proceso más ágil al llegar</div>
+              <div class="benefit-box">Información lista para recepción</div>
+              <div class="benefit-box">Experiencia más cómoda para el cliente</div>
+            </div>
+          </div>
+
+          <div class="preregistro-card">
+            <form id="preregistroForm" class="preregistro-form" onsubmit="return enviarPreregistroDemo(event)">
+              
+              <div class="form-group">
+                <label for="nombreCompleto">Nombre completo</label>
+                <input type="text" id="nombreCompleto" name="nombreCompleto" placeholder="Escribe tu nombre completo" required>
+              </div>
+
+              <div class="form-group">
+                <label for="cedula">Cédula</label>
+                <input type="text" id="cedula" name="cedula" placeholder="Escribe tu número de cédula" required>
+              </div>
+
+              <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Escribe tu número de teléfono" required>
+              </div>
+
+              <div class="form-group">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" placeholder="Escribe tu correo electrónico" required>
+              </div>
+
+              <div class="form-group">
+                <label for="edad">Edad</label>
+                <input type="number" id="edad" name="edad" placeholder="Escribe tu edad" min="12" max="100" required>
+              </div>
+
+              <div class="form-group">
+                <label for="sexo">Sexo</label>
+                <select id="sexo" name="sexo" required>
+                  <option value="">Selecciona una opción</option>
+                  <option value="masculino">Masculino</option>
+                  <option value="femenino">Femenino</option>
+                  <option value="prefiero-no-decir">Prefiero no decirlo</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="objetivo">Objetivo</label>
+                <select id="objetivo" name="objetivo" required>
+                  <option value="">Selecciona tu objetivo</option>
+                  <option value="bajar-peso">Bajar de peso</option>
+                  <option value="ganar-masa-muscular">Ganar masa muscular</option>
+                  <option value="mejorar-condicion-fisica">Mejorar condición física</option>
+                  <option value="mantenerme-activo">Mantenerme activo</option>
+                  <option value="otro">Otro</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="horarioPreferido">Horario preferido</label>
+                <select id="horarioPreferido" name="horarioPreferido" required>
+                  <option value="">Selecciona un horario</option>
+                  <option value="manana">Mañana</option>
+                  <option value="tarde">Tarde</option>
+                  <option value="noche">Noche</option>
+                  <option value="fin-de-semana">Fin de semana</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="planInteres">Plan de interés</label>
+                <select id="planInteres" name="planInteres" required>
+                  <option value="">Selecciona un plan</option>
+                  <option value="basico">Plan Básico</option>
+                  <option value="intermedio">Plan Intermedio</option>
+                  <option value="premium">Plan Premium</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="experienciaPrevia">Experiencia previa</label>
+                <select id="experienciaPrevia" name="experienciaPrevia" required>
+                  <option value="">Selecciona una opción</option>
+                  <option value="ninguna">Ninguna</option>
+                  <option value="poca">Poca</option>
+                  <option value="intermedia">Intermedia</option>
+                  <option value="avanzada">Avanzada</option>
+                </select>
+              </div>
+
+              <div class="form-checkbox">
+                <input type="checkbox" id="autorizacion" name="autorizacion" checked required>
+                <label for="autorizacion">
+                  Autorizo el envío y uso de mis datos para fines de contacto y preregistro.
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-submit">
+                Enviar preregistro
+              </button>
+
+              <p id="mensajeExito" class="mensaje-exito">
+                ¡Preregistro enviado con éxito! Pronto nos pondremos en contacto contigo.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<script>
+  function enviarPreregistroDemo(event) {
+    event.preventDefault();
+
+    const formulario = document.getElementById("preregistroForm");
+    const checkboxAutorizacion = document.getElementById("autorizacion");
+
+    alert("¡Preregistro enviado con éxito! Pronto nos pondremos en contacto contigo.");
+
+    formulario.reset();
+
+    if (checkboxAutorizacion) {
+      checkboxAutorizacion.checked = true;
+    }
+
+    return false;
+  }
+</script>
+</body>
+</html>
