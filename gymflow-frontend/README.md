@@ -31,6 +31,7 @@ Actualmente el proyecto incluye:
 - formulario de preregistro
 - demo funcional del flujo de envío
 
+joseas
 
 ## Tecnologías utilizadas
 
