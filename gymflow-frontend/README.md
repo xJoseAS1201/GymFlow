@@ -30,6 +30,7 @@ Actualmente el proyecto incluye:
 - integración visual de ubicación con Google Maps
 - formulario de preregistro
 - demo funcional del flujo de envío
+hola
 
 ## Tecnologías utilizadas
 
