@@ -1,0 +1,3 @@
+composer create-project laravel/laravel .\gymflow-backend
+cd .\gymflow-backend
+php artisan serve
